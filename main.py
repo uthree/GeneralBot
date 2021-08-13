@@ -8,6 +8,7 @@ import discord.ext.commands as cmd
 
 COGS = [
     'cogs.general',
+    'cogs.fun'
 ]
 
 class Bot(cmd.Bot):
