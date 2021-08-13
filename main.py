@@ -1,5 +1,7 @@
 import asyncio
 import traceback
+import os
+import yaml
 
 import discord
 import discord.ext.commands as cmd
@@ -15,10 +17,37 @@ class Bot(cmd.Bot):
             try:
                 self.load_extension(cog)
             except Exception as e:
-                print(f'Failed to load extension {cog}.', file=sys.stderr)
+                print(f'Failed to load extension {cog}.')
                 traceback.print_exc()
 
     async def on_ready(self):
         print(f'Logged in as {self.user.name} ({self.user.id})')
 
-    
+
+default_token_data = {
+    'using': 'main',
+    'main': '<YOUR BOT TOKEN HERE>'
+}
+
+def main():
+    if not os.path.exists("token.yml"):
+        with open("token.yml", "w") as f:
+            yaml.dump(default_token_data, f)
+            print(
+                """
+                edit token.yml to add your bot token.
+                in default, it will selected `main`. 
+                """
+            )
+            exit()
+    else:
+        with open("token.yml", "r") as f:
+            data = yaml.load(f)
+            token_key = data['using']
+            token = data[token_key]
+            
+        bot = Bot(prefix=f'!')
+        bot.run(token)
+        
+if __name__ == '__main__':
+    main()
