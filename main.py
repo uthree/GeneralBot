@@ -7,6 +7,7 @@ import discord
 import discord.ext.commands as cmd
 
 COGS = [
+    'cogs.general',
 ]
 
 class Bot(cmd.Bot):
@@ -42,7 +43,7 @@ def main():
             exit()
     else:
         with open("token.yml", "r") as f:
-            data = yaml.load(f)
+            data = yaml.safe_load(f)
             token_key = data['using']
             token = data[token_key]
             
