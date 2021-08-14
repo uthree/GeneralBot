@@ -20,5 +20,14 @@ class Fun(commands.Cog):
                 ]
             await ctx.send(random.choice(links))
 
+    @commands.command(aliases=["sintyoku_dame"])
+    async def sinchoku_dame(self,ctx):
+            links = [
+                "https://ghippos.net/image/blog/20131008_1.jpg",
+                "https://livedoor.blogimg.jp/tank_make/imgs/a/9/a996bd7c.jpg",
+                "https://d2dcan0armyq93.cloudfront.net/photo/odai/400/8a1b02cea77695724af97b596cbc5acc_400.jpg"
+                ]
+            await ctx.send(random.choice(links))
+
 def setup(bot):
     bot.add_cog(Fun(bot))
