@@ -18,7 +18,7 @@ Discord上で動作する汎用Botです。
 #### UThree
 
 ```text
-OS: Windows 10
+OS: Windows 10, Build 10.0.19043.1165 x64 Home
 
 Editor: Visual Studio: Code
 ```
