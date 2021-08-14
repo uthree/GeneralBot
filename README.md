@@ -5,6 +5,10 @@
 Discord上で動作する汎用Botです。  
 開発者たちが思いついた機能を詰め込みまくり、問題があれば最速で対応させることを目的として開発されています。
 
+## Tasks
+
+こちらの[Markdown](./todo.md)にタスク一覧が載っています。
+
 ## Developers
 
 - [UThree](https://github.com/uthree)  
