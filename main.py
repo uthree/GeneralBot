@@ -25,6 +25,9 @@ class Bot(cmd.Bot):
     async def on_ready(self):
         print(f'Logged in as {self.user.name} ({self.user.id})')
 
+        game = discord.Game(".help / in development")
+        await self.change_presence(status=discord.Status.online, activity=game)
+
 
 default_token_data = {
     'using': 'main',
@@ -48,7 +51,7 @@ def main():
             token_key = data['using']
             token = data[token_key]
             
-        bot = Bot(prefix=f'!')
+        bot = Bot(prefix=f'.')
         bot.run(token)
         
 if __name__ == '__main__':
