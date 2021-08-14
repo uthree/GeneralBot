@@ -21,6 +21,7 @@ Discord上で動作する汎用Botです。
 OS: Windows 10
 
 Editor: Visual Studio: Code
+```
 
 #### Assault
 
