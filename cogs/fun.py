@@ -38,5 +38,20 @@ class Fun(commands.Cog):
                 ]
         await ctx.send(random.choice(images))
 
+    @commands.command()
+    async def pakason(self,ctx):
+        pakasong_txt  = open('./cogs/pakason.txt', 'r')
+
+        pakasong_list = pakasong_txt.readlines()
+
+        pakasong      = [
+                        pakasong_list[0],
+                        pakasong_list[1],
+                        pakasong_list[2],
+                        pakasong_list[3]
+                        ]
+        await ctx.send(random.choice(pakasong))
+        pakasong_txt.close()
+
 def setup(bot):
     bot.add_cog(Fun(bot))
