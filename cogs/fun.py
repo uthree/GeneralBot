@@ -29,5 +29,14 @@ class Fun(commands.Cog):
                 ]
             await ctx.send(random.choice(links))
 
+    @commands.command()
+    async def krsw(self,ctx):
+        images = [
+                "https://cdn.discordapp.com/attachments/859753134729199666/875924516616957982/KRSW.png", # 無能弁護士
+                "https://cdn.discordapp.com/attachments/859753134729199666/875927011154088016/HSGW.png", # 長谷川亮太
+                "https://cdn.discordapp.com/attachments/859753134729199666/875926898838999050/JEX.jpg"   # ペルソナメガネ
+                ]
+        await ctx.send(random.choice(images))
+
 def setup(bot):
     bot.add_cog(Fun(bot))

@@ -9,8 +9,7 @@ Discord上で動作する汎用Botです。
 
 ### Bot Environment
 
-- Discord.py 1.7.3
-
+- Discord.py 1.7.3  
 - Python 3.9.6
 
 ### Developer Environment
