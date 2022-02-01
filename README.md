@@ -5,6 +5,12 @@
 Discord上で動作する汎用Botです。  
 開発者たちが思いついた機能を詰め込みまくり、問題があれば最速で対応させることを目的として開発されています。
 
+## How to
+```sh
+docker-compose up -d
+```
+
+
 ## Environment
 
 ### Bot Environment
@@ -42,3 +48,4 @@ Editor: NVIM v0.5.0
 
 - [Assault](https://github.com/Assault-8448)  
   ネタコードしか書けない。Archが好き。
+
